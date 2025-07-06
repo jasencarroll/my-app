@@ -1,0 +1,24 @@
+node_modules
+.DS_Store
+*.log
+.env
+.env.local
+dist/
+db/*.sqlite
+db/*.sqlite-journal
+db/*.db
+db/*.db-journal
+db/test.db
+db/test.db-journal
+drizzle/
+
+# Build output
+public/styles.css
+public/main.js
+public/main.js.map
+
+# HMR
+.hmr-timestamp
+
+# Production build
+dist/
