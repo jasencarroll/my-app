@@ -34,8 +34,8 @@ if [ -z "$JWT_SECRET" ]; then\n\
   echo "Generated JWT_SECRET (save this for subsequent deployments): $JWT_SECRET"\n\
 fi\n\
 \n\
-exec bun run start' > /app/docker-entrypoint.sh && \
-chmod +x /app/docker-entrypoint.sh
+exec bun run start' > /app/start.sh && \
+chmod +x /app/start.sh
 
-# Start the server
-CMD ["/app/docker-entrypoint.sh"]
+# Start the server using sh directly
+CMD ["sh", "/app/start.sh"]
